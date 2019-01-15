@@ -1,0 +1,112 @@
+.inputBox {
+    position: fixed;
+    bottom: 0rem;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.inputBox .yuyin {
+    width: 10%;
+    float: left;
+    text-align: center;
+}
+
+.inputBox .yuyin .yy {
+    width: 0.25rem;
+    height: 0.25rem;
+    padding-top: 0.12rem;
+    padding-bottom: 0.12rem;
+}
+
+.inputBox .in {
+    width: 69%;
+    float: left;
+    border-radius: 0.05rem;
+    border: solid 0.005rem #8f99b2;
+    margin-top: 0.12rem;
+    margin-bottom: 0.12rem;
+    min-height: 0.25rem;
+    line-height: 0.25rem;
+    max-height: 1rem;
+    overflow: scroll;
+    word-break: break-all;
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.inputBox .biaoqing {
+    float: left;
+    width: 10%;
+    text-align: center;
+}
+
+.inputBox .biaoqing .bq {
+    width: 0.25rem;
+    height: 0.25rem;
+    padding-top: 0.12rem;
+    padding-bottom: 0.12rem;
+}
+
+.inputBox .fasong {
+    float: left;
+    width: 10%;
+    text-align: center;
+}
+
+.inputBox .fasong .fs {
+    width: 0.25rem;
+    height: 0.25rem;
+    padding-top: 0.12rem;
+    padding-bottom: 0.12rem;
+}
+
+.qp {
+    margin-top: 0.25rem;
+    /*float: right;*/
+    width: 100%;
+}
+
+.qp .img1 {
+    width: 0.25rem;
+    float: left;
+    padding-right: 0.05rem;
+}
+
+.msg1 {
+    /*height: 0.3rem;*/
+    display: inline-block;
+    max-width: 2rem;
+    background-color: #1b8cf4;
+    border-radius: 0.05rem;
+    border: solid 0.005rem #8f99b2;
+    color: #ffffff;
+    line-height: 0.3rem;
+    padding: 0.04rem;
+    float: left;
+    text-align: left;
+    word-break: break-all;
+}
+
+.qp .img2 {
+    width: 0.25rem;
+    float: right;
+    padding-right: 0.05rem;
+}
+
+.msg2 {
+    /*height: 0.3rem;*/
+    display: inline-block;
+    max-width: 2rem;
+    background-color: #1b8cf4;
+    border-radius: 0.05rem;
+    border: solid 0.005rem #8f99b2;
+    color: #ffffff;
+    line-height: 0.3rem;
+    padding: 0.04rem;
+    float: right;
+    text-align: left;
+    word-break: break-all;
+}

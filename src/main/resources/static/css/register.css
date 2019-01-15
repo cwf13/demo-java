@@ -1,0 +1,154 @@
+body, html {
+    padding: 0;
+    background-color: #fff;
+
+}
+
+.bg {
+    background-image: url("../img/common/bg.png");
+    height: 4rem;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.bg img {
+    position: absolute;
+    right: 0.1rem;
+    top: 0.1rem;
+    width: 0.135rem;
+    height: 0.135rem;
+}
+
+.main {
+    width: 92%;
+    margin-left: 4%;
+    padding: 0.24rem;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    box-shadow: 0rem 0.075rem 0.15rem 0rem rgba(10, 57, 122, 0.25);
+    position: absolute;
+    top: 2rem;
+}
+
+.main .in {
+    height: 0.36rem;
+    background-color: #ffffff;
+    border: solid 0.005rem #b3b3b3;
+    display: block;
+    width: 100%;
+    margin-bottom: 0.1rem;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+    box-sizing: border-box;
+}
+
+.main .telLogin {
+    margin-bottom: 0.15rem;
+}
+
+.main .telLogin .quhao {
+    width: 24%;
+    float: left;
+    height: 0.36rem;
+    margin-right: 1%;
+    border: solid 0.005rem #b3b3b3;
+}
+
+.main .telLogin .quhao .qh {
+    width: 50%;
+    float: left;
+    line-height: 0.36rem;
+    height: 0.36rem;
+    border-top: solid 0.005rem #b3b3b3;
+    border-left: solid 0.005rem #b3b3b3;
+    border-bottom: solid 0.005rem #b3b3b3;
+}
+
+.main .telLogin .quhao img {
+    height: 0.2rem;
+    float: left;
+    padding-top: 0.1rem;
+}
+
+.main .telLogin .phoLogin {
+    float: left;
+    width: 74%;
+    height: 0.36rem;
+    border: solid 0.005rem #b3b3b3;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+    box-sizing: border-box;
+}
+
+.main .getCode {
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.main .getCode .inCode {
+    height: 0.36rem;
+    background-color: #ffffff;
+    width: 70%;
+    border: solid 0.005rem #b3b3b3;
+    display: block;
+    float: left;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+    box-sizing: border-box;
+    margin-right: 2%;
+}
+
+.main .getCode .get {
+    height: 0.36rem;
+    width: 28%;
+    display: block;
+    float: left;
+    background-color: #1f6bd3;
+    color: #fff;
+    font-size: 0.12rem;
+    text-align: center;
+    line-height: 0.36rem;
+}
+
+.xieyi {
+    height: 0.2rem;
+    line-height: 0.2rem;
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+
+}
+
+.xieyi img {
+    height: 0.12rem;
+    float: left;
+    margin-right: 0.1rem;
+    padding-top: 0.03rem;
+}
+
+.xieyi .xy {
+    font-family: PingFang-SC-Regular;
+    font-size: 0.09rem;
+    float: left;
+}
+
+.main .btn {
+    background-color: #d0d0d0;;
+    /*background: #1f6bd3;*/
+    height: 0.35rem;
+    color: #fff;
+    text-align: center;
+    line-height: 0.35rem;
+
+}
+
+.denglu {
+    width: 100%;
+    margin-top: 1.8rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.denglu span {
+    color: #1f6bd3;
+}

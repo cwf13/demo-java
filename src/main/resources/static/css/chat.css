@@ -1,0 +1,37 @@
+body {
+    padding: 0;
+    background-color: #ffffff;
+    padding-bottom: 0.49rem;
+}
+
+.main {
+    padding-top: 0.1rem;
+    padding-right: 3%;
+    padding-left: 3%;
+}
+
+.main .msg {
+    font-size: 0.2rem;
+    height: 0.4rem;
+    line-height: 0.4rem;
+}
+
+.main ul li {
+    width: 100%;
+    margin-bottom: 0.15rem;
+}
+
+.main ul li img {
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    float: left;
+}
+
+.main ul li span {
+    height: 0.5rem;
+    line-height: 0.5rem;
+    float: left;
+    padding-left: 0.1rem;
+}

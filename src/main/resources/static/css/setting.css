@@ -1,0 +1,39 @@
+html, body {
+    /*padding: 0;*/
+}
+
+ul {
+    margin-top: 0.1rem;
+}
+
+ul li {
+    height: 0.4rem;
+    border-bottom: solid 2px #f2f2f2;
+    line-height: 0.4rem;
+    background-color: #ffffff;
+    padding-right: 0.12rem;
+    padding-left: 0.12rem;
+    box-sizing: border-box;
+}
+
+ul li img {
+    height: 0.12rem;
+    float: right;
+    padding-top: 0.14rem;
+}
+
+.btn {
+    height: 0.4rem;
+    font-family: PingFang-SC-Regular;
+    font-size: 0.13rem;
+    color: #333333;;
+    text-align: center;
+    line-height: 0.4rem;
+    background-color: #ffffff;
+    margin-top: 0.1rem;
+}
+
+ul li .hc {
+    float: right;
+    padding-right: 0.05rem;
+}

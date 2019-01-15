@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        input.ng-invalid {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body ng-app="myApp">
+
+<runoob-directive></runoob-directive>
+
+<div ng-controller="myctrl">
+
+    <input type="text" ng-model="te">
+    <p><span ng-bind="te"></span></p>
+    <p><span ng-bind="theTime"></span></p>
+    <button ng-click='myclick()'>点我</button>
+    <h1>{{tes}}</h1>
+</div>
+
+<form name="myForm">
+    Email:
+    <input type="email" name="myAddress" ng-model="text" required>
+    <span ng-show="myForm.myAddress.$error.email">不是一个合法的邮箱地址</span>
+</form>
+
+<div ng-controller="myc">
+    <button ng-click='myc()' ></button>
+    <ul>
+        <li ng-repeat="na in nas">
+            <p> <span ng-bind="na"></span></p>
+        </li>
+    </ul>
+</div>
+
+
+</body>
+<script type="text/javascript" charset="utf-8" src="../static/js/plugins/JQuery/jquery-1.11.3.min.js"></script>
+<script src="https://cdn.staticfile.org/angular.js/1.4.6/angular.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="../static/js/common.js"></script>
+<script>
+    var app = angular.module("myApp",[]);
+
+    app.controller("myctrl",function($scope,$location,$timeout,$interval, $http){
+        $scope.te="fsjflja";
+        var url = $location.absUrl();
+        var path = $location.path();
+        alert(url);
+        alert(path);
+        $timeout(function () {
+            $scope.te = "How are you today?";
+        }, 2000);
+
+        $scope.theTime = new Date().toLocaleTimeString();
+        $interval(function () {
+            $scope.theTime = new Date().toLocaleTimeString();
+        }, 1000);
+
+        $scope.myclick=function(){
+
+            var obj = new Object();
+            obj.userName = '123456';
+            obj.password = '123456';
+            alert("9999999");
+            $scope.te='oooooooo';
+
+            alert("进来了");
+            $http({
+                method: 'post',
+                url: BASE_URL + "/user/zalogin",
+                params:obj,
+            }).then(function successCallback(response) {
+
+                var url = $location.absUrl();
+                var path = $location.path();
+                alert(url);
+                alert(path);
+
+                alert( response.data.resCode);
+                alert( response.data.msg);
+                alert( response.data.data.totalissueVolumel);
+
+                if (response.data.resCode == 1) {
+                    location.href = 'zaindex.html';
+                }
+
+                $scope.names = response.data.sites;
+            }, function errorCallback(response) {
+                // 请求失败执行代码
+            });
+
+        };
+
+
+
+
+    });
+
+    app.controller("myc",function($scope){
+        $scope.myc=function(){
+            alert("进来了");
+            $scope.nas=['pp','ii','yy','rr'];
+        }
+
+
+    });
+
+    /*app.directive("runoobDirective", function() {
+        return {
+            template : "<h1>自定义fghfdkl指令!</h1>"
+        };
+    });*/
+</script>
+</html>

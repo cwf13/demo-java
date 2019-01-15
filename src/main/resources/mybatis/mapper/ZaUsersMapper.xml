@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cooc.demo.mapper.ZaUsersMapper">
+    <resultMap id="BaseResultMap" type="cooc.demo.model.ZaUsers">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="gulidId" property="gulidid" jdbcType="BIGINT"/>
+        <result column="account" property="account" jdbcType="VARCHAR"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="password" property="password" jdbcType="VARCHAR"/>
+        <result column="tel" property="tel" jdbcType="VARCHAR"/>
+        <result column="sex" property="sex" jdbcType="VARCHAR"/>
+        <result column="headimg" property="headimg" jdbcType="VARCHAR"/>
+        <result column="area" property="area" jdbcType="VARCHAR"/>
+        <result column="lv" property="lv" jdbcType="INTEGER"/>
+        <result column="roomcard" property="roomcard" jdbcType="INTEGER"/>
+        <result column="coins" property="coins" jdbcType="INTEGER"/>
+        <result column="score" property="score" jdbcType="INTEGER"/>
+        <result column="createtime" property="createtime" jdbcType="TIMESTAMP"/>
+        <result column="ip" property="ip" jdbcType="VARCHAR"/>
+        <result column="logintime" property="logintime" jdbcType="TIMESTAMP"/>
+        <result column="openid" property="openid" jdbcType="VARCHAR"/>
+        <result column="unionid" property="unionid" jdbcType="VARCHAR"/>
+        <result column="uuid" property="uuid" jdbcType="VARCHAR"/>
+        <result column="status" property="status" jdbcType="INTEGER"/>
+        <result column="isAuthentication" property="isauthentication" jdbcType="INTEGER"/>
+        <result column="memo" property="memo" jdbcType="VARCHAR"/>
+        <result column="vip" property="vip" jdbcType="INTEGER"/>
+        <result column="safe" property="safe" jdbcType="VARCHAR"/>
+        <result column="luck" property="luck" jdbcType="INTEGER"/>
+        <result column="safeprice" property="safeprice" jdbcType="DOUBLE"/>
+        <result column="yuanbao" property="yuanbao" jdbcType="DECIMAL"/>
+        <result column="operatorMark" property="operatormark" jdbcType="VARCHAR"/>
+        <result column="isManag" property="ismanag" jdbcType="INTEGER"/>
+        <result column="pumpVal" property="pumpval" jdbcType="INTEGER"/>
+        <result column="winVal" property="winval" jdbcType="INTEGER"/>
+        <result column="loseVal" property="loseval" jdbcType="INTEGER"/>
+        <result column="Losevalue" property="losevalue" jdbcType="INTEGER"/>
+        <result column="wholecost" property="wholecost" jdbcType="INTEGER"/>
+        <result column="sign" property="sign" jdbcType="VARCHAR"/>
+        <result column="registerCoins" property="registercoins" jdbcType="INTEGER"/>
+        <result column="registerIp" property="registerip" jdbcType="VARCHAR"/>
+        <result column="platform" property="platform" jdbcType="VARCHAR"/>
+        <result column="loseCount" property="losecount" jdbcType="INTEGER"/>
+        <result column="winCount" property="wincount" jdbcType="INTEGER"/>
+        <result column="drawCount" property="drawcount" jdbcType="INTEGER"/>
+        <result column="isown" property="isown" jdbcType="INTEGER"/>
+        <result column="Identification" property="identification" jdbcType="VARCHAR"/>
+        <result column="cut" property="cut" jdbcType="DECIMAL"/>
+        <result column="balance" property="balance" jdbcType="DECIMAL"/>
+        <result column="wx_openId" property="wxOpenid" jdbcType="VARCHAR"/>
+        <result column="parUserId" property="paruserid" jdbcType="BIGINT"/>
+        <result column="parUsers" property="parusers" jdbcType="VARCHAR"/>
+        <result column="clubIds" property="clubids" jdbcType="VARCHAR"/>
+        <result column="top_club" property="topClub" jdbcType="BIGINT"/>
+        <result column="Machine" property="machine" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, gulidId, account, name, password, tel, sex, headimg, area, lv, roomcard, coins,
+        score, createtime, ip, logintime, openid, unionid, uuid, status, isAuthentication,
+        memo, vip, safe, luck, safeprice, yuanbao, operatorMark, isManag, pumpVal, winVal,
+        loseVal, Losevalue, wholecost, sign, registerCoins, registerIp, platform, loseCount,
+        winCount, drawCount, isown, Identification, cut, balance, wx_openId, parUserId, parUsers,
+        clubIds, top_club, Machine
+    </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List"/>
+        from za_users
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete from za_users
+        where id = #{id,jdbcType=BIGINT}
+    </delete>
+    <insert id="insert" parameterType="cooc.demo.model.ZaUsers">
+        insert into za_users (id, gulidId, account,
+        name, password, tel,
+        sex, headimg, area,
+        lv, roomcard, coins,
+        score, createtime, ip,
+        logintime, openid, unionid,
+        uuid, status, isAuthentication,
+        memo, vip, safe, luck,
+        safeprice, yuanbao, operatorMark,
+        isManag, pumpVal, winVal,
+        loseVal, Losevalue, wholecost,
+        sign, registerCoins, registerIp,
+        platform, loseCount, winCount,
+        drawCount, isown, Identification,
+        cut, balance, wx_openId,
+        parUserId, parUsers, clubIds,
+        top_club, Machine)
+        values (#{id,jdbcType=BIGINT}, #{gulidid,jdbcType=BIGINT}, #{account,jdbcType=VARCHAR},
+        #{name,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{tel,jdbcType=VARCHAR},
+        #{sex,jdbcType=VARCHAR}, #{headimg,jdbcType=VARCHAR}, #{area,jdbcType=VARCHAR},
+        #{lv,jdbcType=INTEGER}, #{roomcard,jdbcType=INTEGER}, #{coins,jdbcType=INTEGER},
+        #{score,jdbcType=INTEGER}, #{createtime,jdbcType=TIMESTAMP}, #{ip,jdbcType=VARCHAR},
+        #{logintime,jdbcType=TIMESTAMP}, #{openid,jdbcType=VARCHAR}, #{unionid,jdbcType=VARCHAR},
+        #{uuid,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, #{isauthentication,jdbcType=INTEGER},
+        #{memo,jdbcType=VARCHAR}, #{vip,jdbcType=INTEGER}, #{safe,jdbcType=VARCHAR}, #{luck,jdbcType=INTEGER},
+        #{safeprice,jdbcType=DOUBLE}, #{yuanbao,jdbcType=DECIMAL}, #{operatormark,jdbcType=VARCHAR},
+        #{ismanag,jdbcType=INTEGER}, #{pumpval,jdbcType=INTEGER}, #{winval,jdbcType=INTEGER},
+        #{loseval,jdbcType=INTEGER}, #{losevalue,jdbcType=INTEGER}, #{wholecost,jdbcType=INTEGER},
+        #{sign,jdbcType=VARCHAR}, #{registercoins,jdbcType=INTEGER}, #{registerip,jdbcType=VARCHAR},
+        #{platform,jdbcType=VARCHAR}, #{losecount,jdbcType=INTEGER}, #{wincount,jdbcType=INTEGER},
+        #{drawcount,jdbcType=INTEGER}, #{isown,jdbcType=INTEGER}, #{identification,jdbcType=VARCHAR},
+        #{cut,jdbcType=DECIMAL}, #{balance,jdbcType=DECIMAL}, #{wxOpenid,jdbcType=VARCHAR},
+        #{paruserid,jdbcType=BIGINT}, #{parusers,jdbcType=VARCHAR}, #{clubids,jdbcType=VARCHAR},
+        #{topClub,jdbcType=BIGINT}, #{machine,jdbcType=VARCHAR})
+    </insert>
+    <insert id="insertSelective" parameterType="cooc.demo.model.ZaUsers">
+        insert into za_users
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="gulidid != null">
+                gulidId,
+            </if>
+            <if test="account != null">
+                account,
+            </if>
+            <if test="name != null">
+                name,
+            </if>
+            <if test="password != null">
+                password,
+            </if>
+            <if test="tel != null">
+                tel,
+            </if>
+            <if test="sex != null">
+                sex,
+            </if>
+            <if test="headimg != null">
+                headimg,
+            </if>
+            <if test="area != null">
+                area,
+            </if>
+            <if test="lv != null">
+                lv,
+            </if>
+            <if test="roomcard != null">
+                roomcard,
+            </if>
+            <if test="coins != null">
+                coins,
+            </if>
+            <if test="score != null">
+                score,
+            </if>
+            <if test="createtime != null">
+                createtime,
+            </if>
+            <if test="ip != null">
+                ip,
+            </if>
+            <if test="logintime != null">
+                logintime,
+            </if>
+            <if test="openid != null">
+                openid,
+            </if>
+            <if test="unionid != null">
+                unionid,
+            </if>
+            <if test="uuid != null">
+                uuid,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="isauthentication != null">
+                isAuthentication,
+            </if>
+            <if test="memo != null">
+                memo,
+            </if>
+            <if test="vip != null">
+                vip,
+            </if>
+            <if test="safe != null">
+                safe,
+            </if>
+            <if test="luck != null">
+                luck,
+            </if>
+            <if test="safeprice != null">
+                safeprice,
+            </if>
+            <if test="yuanbao != null">
+                yuanbao,
+            </if>
+            <if test="operatormark != null">
+                operatorMark,
+            </if>
+            <if test="ismanag != null">
+                isManag,
+            </if>
+            <if test="pumpval != null">
+                pumpVal,
+            </if>
+            <if test="winval != null">
+                winVal,
+            </if>
+            <if test="loseval != null">
+                loseVal,
+            </if>
+            <if test="losevalue != null">
+                Losevalue,
+            </if>
+            <if test="wholecost != null">
+                wholecost,
+            </if>
+            <if test="sign != null">
+                sign,
+            </if>
+            <if test="registercoins != null">
+                registerCoins,
+            </if>
+            <if test="registerip != null">
+                registerIp,
+            </if>
+            <if test="platform != null">
+                platform,
+            </if>
+            <if test="losecount != null">
+                loseCount,
+            </if>
+            <if test="wincount != null">
+                winCount,
+            </if>
+            <if test="drawcount != null">
+                drawCount,
+            </if>
+            <if test="isown != null">
+                isown,
+            </if>
+            <if test="identification != null">
+                Identification,
+            </if>
+            <if test="cut != null">
+                cut,
+            </if>
+            <if test="balance != null">
+                balance,
+            </if>
+            <if test="wxOpenid != null">
+                wx_openId,
+            </if>
+            <if test="paruserid != null">
+                parUserId,
+            </if>
+            <if test="parusers != null">
+                parUsers,
+            </if>
+            <if test="clubids != null">
+                clubIds,
+            </if>
+            <if test="topClub != null">
+                top_club,
+            </if>
+            <if test="machine != null">
+                Machine,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="gulidid != null">
+                #{gulidid,jdbcType=BIGINT},
+            </if>
+            <if test="account != null">
+                #{account,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="password != null">
+                #{password,jdbcType=VARCHAR},
+            </if>
+            <if test="tel != null">
+                #{tel,jdbcType=VARCHAR},
+            </if>
+            <if test="sex != null">
+                #{sex,jdbcType=VARCHAR},
+            </if>
+            <if test="headimg != null">
+                #{headimg,jdbcType=VARCHAR},
+            </if>
+            <if test="area != null">
+                #{area,jdbcType=VARCHAR},
+            </if>
+            <if test="lv != null">
+                #{lv,jdbcType=INTEGER},
+            </if>
+            <if test="roomcard != null">
+                #{roomcard,jdbcType=INTEGER},
+            </if>
+            <if test="coins != null">
+                #{coins,jdbcType=INTEGER},
+            </if>
+            <if test="score != null">
+                #{score,jdbcType=INTEGER},
+            </if>
+            <if test="createtime != null">
+                #{createtime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="ip != null">
+                #{ip,jdbcType=VARCHAR},
+            </if>
+            <if test="logintime != null">
+                #{logintime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="openid != null">
+                #{openid,jdbcType=VARCHAR},
+            </if>
+            <if test="unionid != null">
+                #{unionid,jdbcType=VARCHAR},
+            </if>
+            <if test="uuid != null">
+                #{uuid,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=INTEGER},
+            </if>
+            <if test="isauthentication != null">
+                #{isauthentication,jdbcType=INTEGER},
+            </if>
+            <if test="memo != null">
+                #{memo,jdbcType=VARCHAR},
+            </if>
+            <if test="vip != null">
+                #{vip,jdbcType=INTEGER},
+            </if>
+            <if test="safe != null">
+                #{safe,jdbcType=VARCHAR},
+            </if>
+            <if test="luck != null">
+                #{luck,jdbcType=INTEGER},
+            </if>
+            <if test="safeprice != null">
+                #{safeprice,jdbcType=DOUBLE},
+            </if>
+            <if test="yuanbao != null">
+                #{yuanbao,jdbcType=DECIMAL},
+            </if>
+            <if test="operatormark != null">
+                #{operatormark,jdbcType=VARCHAR},
+            </if>
+            <if test="ismanag != null">
+                #{ismanag,jdbcType=INTEGER},
+            </if>
+            <if test="pumpval != null">
+                #{pumpval,jdbcType=INTEGER},
+            </if>
+            <if test="winval != null">
+                #{winval,jdbcType=INTEGER},
+            </if>
+            <if test="loseval != null">
+                #{loseval,jdbcType=INTEGER},
+            </if>
+            <if test="losevalue != null">
+                #{losevalue,jdbcType=INTEGER},
+            </if>
+            <if test="wholecost != null">
+                #{wholecost,jdbcType=INTEGER},
+            </if>
+            <if test="sign != null">
+                #{sign,jdbcType=VARCHAR},
+            </if>
+            <if test="registercoins != null">
+                #{registercoins,jdbcType=INTEGER},
+            </if>
+            <if test="registerip != null">
+                #{registerip,jdbcType=VARCHAR},
+            </if>
+            <if test="platform != null">
+                #{platform,jdbcType=VARCHAR},
+            </if>
+            <if test="losecount != null">
+                #{losecount,jdbcType=INTEGER},
+            </if>
+            <if test="wincount != null">
+                #{wincount,jdbcType=INTEGER},
+            </if>
+            <if test="drawcount != null">
+                #{drawcount,jdbcType=INTEGER},
+            </if>
+            <if test="isown != null">
+                #{isown,jdbcType=INTEGER},
+            </if>
+            <if test="identification != null">
+                #{identification,jdbcType=VARCHAR},
+            </if>
+            <if test="cut != null">
+                #{cut,jdbcType=DECIMAL},
+            </if>
+            <if test="balance != null">
+                #{balance,jdbcType=DECIMAL},
+            </if>
+            <if test="wxOpenid != null">
+                #{wxOpenid,jdbcType=VARCHAR},
+            </if>
+            <if test="paruserid != null">
+                #{paruserid,jdbcType=BIGINT},
+            </if>
+            <if test="parusers != null">
+                #{parusers,jdbcType=VARCHAR},
+            </if>
+            <if test="clubids != null">
+                #{clubids,jdbcType=VARCHAR},
+            </if>
+            <if test="topClub != null">
+                #{topClub,jdbcType=BIGINT},
+            </if>
+            <if test="machine != null">
+                #{machine,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="cooc.demo.model.ZaUsers">
+        update za_users
+        <set>
+            <if test="gulidid != null">
+                gulidId = #{gulidid,jdbcType=BIGINT},
+            </if>
+            <if test="account != null">
+                account = #{account,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="password != null">
+                password = #{password,jdbcType=VARCHAR},
+            </if>
+            <if test="tel != null">
+                tel = #{tel,jdbcType=VARCHAR},
+            </if>
+            <if test="sex != null">
+                sex = #{sex,jdbcType=VARCHAR},
+            </if>
+            <if test="headimg != null">
+                headimg = #{headimg,jdbcType=VARCHAR},
+            </if>
+            <if test="area != null">
+                area = #{area,jdbcType=VARCHAR},
+            </if>
+            <if test="lv != null">
+                lv = #{lv,jdbcType=INTEGER},
+            </if>
+            <if test="roomcard != null">
+                roomcard = #{roomcard,jdbcType=INTEGER},
+            </if>
+            <if test="coins != null">
+                coins = #{coins,jdbcType=INTEGER},
+            </if>
+            <if test="score != null">
+                score = #{score,jdbcType=INTEGER},
+            </if>
+            <if test="createtime != null">
+                createtime = #{createtime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="ip != null">
+                ip = #{ip,jdbcType=VARCHAR},
+            </if>
+            <if test="logintime != null">
+                logintime = #{logintime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="openid != null">
+                openid = #{openid,jdbcType=VARCHAR},
+            </if>
+            <if test="unionid != null">
+                unionid = #{unionid,jdbcType=VARCHAR},
+            </if>
+            <if test="uuid != null">
+                uuid = #{uuid,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=INTEGER},
+            </if>
+            <if test="isauthentication != null">
+                isAuthentication = #{isauthentication,jdbcType=INTEGER},
+            </if>
+            <if test="memo != null">
+                memo = #{memo,jdbcType=VARCHAR},
+            </if>
+            <if test="vip != null">
+                vip = #{vip,jdbcType=INTEGER},
+            </if>
+            <if test="safe != null">
+                safe = #{safe,jdbcType=VARCHAR},
+            </if>
+            <if test="luck != null">
+                luck = #{luck,jdbcType=INTEGER},
+            </if>
+            <if test="safeprice != null">
+                safeprice = #{safeprice,jdbcType=DOUBLE},
+            </if>
+            <if test="yuanbao != null">
+                yuanbao = #{yuanbao,jdbcType=DECIMAL},
+            </if>
+            <if test="operatormark != null">
+                operatorMark = #{operatormark,jdbcType=VARCHAR},
+            </if>
+            <if test="ismanag != null">
+                isManag = #{ismanag,jdbcType=INTEGER},
+            </if>
+            <if test="pumpval != null">
+                pumpVal = #{pumpval,jdbcType=INTEGER},
+            </if>
+            <if test="winval != null">
+                winVal = #{winval,jdbcType=INTEGER},
+            </if>
+            <if test="loseval != null">
+                loseVal = #{loseval,jdbcType=INTEGER},
+            </if>
+            <if test="losevalue != null">
+                Losevalue = #{losevalue,jdbcType=INTEGER},
+            </if>
+            <if test="wholecost != null">
+                wholecost = #{wholecost,jdbcType=INTEGER},
+            </if>
+            <if test="sign != null">
+                sign = #{sign,jdbcType=VARCHAR},
+            </if>
+            <if test="registercoins != null">
+                registerCoins = #{registercoins,jdbcType=INTEGER},
+            </if>
+            <if test="registerip != null">
+                registerIp = #{registerip,jdbcType=VARCHAR},
+            </if>
+            <if test="platform != null">
+                platform = #{platform,jdbcType=VARCHAR},
+            </if>
+            <if test="losecount != null">
+                loseCount = #{losecount,jdbcType=INTEGER},
+            </if>
+            <if test="wincount != null">
+                winCount = #{wincount,jdbcType=INTEGER},
+            </if>
+            <if test="drawcount != null">
+                drawCount = #{drawcount,jdbcType=INTEGER},
+            </if>
+            <if test="isown != null">
+                isown = #{isown,jdbcType=INTEGER},
+            </if>
+            <if test="identification != null">
+                Identification = #{identification,jdbcType=VARCHAR},
+            </if>
+            <if test="cut != null">
+                cut = #{cut,jdbcType=DECIMAL},
+            </if>
+            <if test="balance != null">
+                balance = #{balance,jdbcType=DECIMAL},
+            </if>
+            <if test="wxOpenid != null">
+                wx_openId = #{wxOpenid,jdbcType=VARCHAR},
+            </if>
+            <if test="paruserid != null">
+                parUserId = #{paruserid,jdbcType=BIGINT},
+            </if>
+            <if test="parusers != null">
+                parUsers = #{parusers,jdbcType=VARCHAR},
+            </if>
+            <if test="clubids != null">
+                clubIds = #{clubids,jdbcType=VARCHAR},
+            </if>
+            <if test="topClub != null">
+                top_club = #{topClub,jdbcType=BIGINT},
+            </if>
+            <if test="machine != null">
+                Machine = #{machine,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="cooc.demo.model.ZaUsers">
+        update za_users
+        set gulidId = #{gulidid,jdbcType=BIGINT},
+        account = #{account,jdbcType=VARCHAR},
+        name = #{name,jdbcType=VARCHAR},
+        password = #{password,jdbcType=VARCHAR},
+        tel = #{tel,jdbcType=VARCHAR},
+        sex = #{sex,jdbcType=VARCHAR},
+        headimg = #{headimg,jdbcType=VARCHAR},
+        area = #{area,jdbcType=VARCHAR},
+        lv = #{lv,jdbcType=INTEGER},
+        roomcard = #{roomcard,jdbcType=INTEGER},
+        coins = #{coins,jdbcType=INTEGER},
+        score = #{score,jdbcType=INTEGER},
+        createtime = #{createtime,jdbcType=TIMESTAMP},
+        ip = #{ip,jdbcType=VARCHAR},
+        logintime = #{logintime,jdbcType=TIMESTAMP},
+        openid = #{openid,jdbcType=VARCHAR},
+        unionid = #{unionid,jdbcType=VARCHAR},
+        uuid = #{uuid,jdbcType=VARCHAR},
+        status = #{status,jdbcType=INTEGER},
+        isAuthentication = #{isauthentication,jdbcType=INTEGER},
+        memo = #{memo,jdbcType=VARCHAR},
+        vip = #{vip,jdbcType=INTEGER},
+        safe = #{safe,jdbcType=VARCHAR},
+        luck = #{luck,jdbcType=INTEGER},
+        safeprice = #{safeprice,jdbcType=DOUBLE},
+        yuanbao = #{yuanbao,jdbcType=DECIMAL},
+        operatorMark = #{operatormark,jdbcType=VARCHAR},
+        isManag = #{ismanag,jdbcType=INTEGER},
+        pumpVal = #{pumpval,jdbcType=INTEGER},
+        winVal = #{winval,jdbcType=INTEGER},
+        loseVal = #{loseval,jdbcType=INTEGER},
+        Losevalue = #{losevalue,jdbcType=INTEGER},
+        wholecost = #{wholecost,jdbcType=INTEGER},
+        sign = #{sign,jdbcType=VARCHAR},
+        registerCoins = #{registercoins,jdbcType=INTEGER},
+        registerIp = #{registerip,jdbcType=VARCHAR},
+        platform = #{platform,jdbcType=VARCHAR},
+        loseCount = #{losecount,jdbcType=INTEGER},
+        winCount = #{wincount,jdbcType=INTEGER},
+        drawCount = #{drawcount,jdbcType=INTEGER},
+        isown = #{isown,jdbcType=INTEGER},
+        Identification = #{identification,jdbcType=VARCHAR},
+        cut = #{cut,jdbcType=DECIMAL},
+        balance = #{balance,jdbcType=DECIMAL},
+        wx_openId = #{wxOpenid,jdbcType=VARCHAR},
+        parUserId = #{paruserid,jdbcType=BIGINT},
+        parUsers = #{parusers,jdbcType=VARCHAR},
+        clubIds = #{clubids,jdbcType=VARCHAR},
+        top_club = #{topClub,jdbcType=BIGINT},
+        Machine = #{machine,jdbcType=VARCHAR}
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+
+    <select id="queryByLogins" parameterType="java.util.Map" resultMap="BaseResultMap">
+
+
+    select
+    <include refid="Base_Column_List"/>
+    from za_users
+    where
+    (
+    tel = #{tel,jdbcType=VARCHAR}
+    or account = #{account,jdbcType=VARCHAR}
+    )
+    and
+    password = #{password,jdbcType=VARCHAR}
+
+</select>
+
+    <select id="getUserList" resultType="java.util.Map">
+         select
+         id, gulidId, account, name, password, tel, sex, headimg, area, lv, roomcard, coins,
+        score, createtime, ip, logintime, openid, unionid, uuid, status, isAuthentication,
+        memo, vip, safe, luck, safeprice, yuanbao, operatorMark, isManag, pumpVal, winVal,
+        loseVal, Losevalue, wholecost, sign, registerCoins, registerIp, platform, loseCount,
+        winCount, drawCount, isown, Identification, cut, balance, wx_openId, parUserId, parUsers,
+        clubIds, top_club, Machine
+        from za_users
+
+    </select>
+</mapper>

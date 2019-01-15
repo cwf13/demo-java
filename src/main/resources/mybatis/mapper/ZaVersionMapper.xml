@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cooc.demo.mapper.ZaVersionMapper">
+    <resultMap id="BaseResultMap" type="cooc.demo.model.ZaVersion">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="version" property="version" jdbcType="VARCHAR"/>
+        <result column="isshop" property="isshop" jdbcType="INTEGER"/>
+        <result column="isvisiter" property="isvisiter" jdbcType="INTEGER"/>
+        <result column="ismemu" property="ismemu" jdbcType="INTEGER"/>
+        <result column="url" property="url" jdbcType="VARCHAR"/>
+        <result column="platform" property="platform" jdbcType="VARCHAR"/>
+        <result column="memo" property="memo" jdbcType="VARCHAR"/>
+        <result column="mch" property="mch" jdbcType="VARCHAR"/>
+        <result column="key" property="key" jdbcType="VARCHAR"/>
+        <result column="ThirdPay" property="thirdpay" jdbcType="VARCHAR"/>
+        <result column="veUrl" property="veurl" jdbcType="VARCHAR"/>
+        <result column="thirdUrl" property="thirdurl" jdbcType="VARCHAR"/>
+        <result column="orderUrl" property="orderurl" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, version, isshop, isvisiter, ismemu, url, platform, memo, mch, `key`, ThirdPay,
+        veUrl, thirdUrl, orderUrl
+    </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List"/>
+        from za_version
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete from za_version
+        where id = #{id,jdbcType=BIGINT}
+    </delete>
+    <insert id="insert" parameterType="cooc.demo.model.ZaVersion">
+        insert into za_version (id, version, isshop,
+        isvisiter, ismemu, url,
+        platform, memo, mch,
+        key, ThirdPay, veUrl,
+        thirdUrl, orderUrl)
+        values (#{id,jdbcType=BIGINT}, #{version,jdbcType=VARCHAR}, #{isshop,jdbcType=INTEGER},
+        #{isvisiter,jdbcType=INTEGER}, #{ismemu,jdbcType=INTEGER}, #{url,jdbcType=VARCHAR},
+        #{platform,jdbcType=VARCHAR}, #{memo,jdbcType=VARCHAR}, #{mch,jdbcType=VARCHAR},
+        #{key,jdbcType=VARCHAR}, #{thirdpay,jdbcType=VARCHAR}, #{veurl,jdbcType=VARCHAR},
+        #{thirdurl,jdbcType=VARCHAR}, #{orderurl,jdbcType=VARCHAR})
+    </insert>
+    <insert id="insertSelective" parameterType="cooc.demo.model.ZaVersion">
+        insert into za_version
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="version != null">
+                version,
+            </if>
+            <if test="isshop != null">
+                isshop,
+            </if>
+            <if test="isvisiter != null">
+                isvisiter,
+            </if>
+            <if test="ismemu != null">
+                ismemu,
+            </if>
+            <if test="url != null">
+                url,
+            </if>
+            <if test="platform != null">
+                platform,
+            </if>
+            <if test="memo != null">
+                memo,
+            </if>
+            <if test="mch != null">
+                mch,
+            </if>
+            <if test="key != null">
+                key,
+            </if>
+            <if test="thirdpay != null">
+                ThirdPay,
+            </if>
+            <if test="veurl != null">
+                veUrl,
+            </if>
+            <if test="thirdurl != null">
+                thirdUrl,
+            </if>
+            <if test="orderurl != null">
+                orderUrl,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="version != null">
+                #{version,jdbcType=VARCHAR},
+            </if>
+            <if test="isshop != null">
+                #{isshop,jdbcType=INTEGER},
+            </if>
+            <if test="isvisiter != null">
+                #{isvisiter,jdbcType=INTEGER},
+            </if>
+            <if test="ismemu != null">
+                #{ismemu,jdbcType=INTEGER},
+            </if>
+            <if test="url != null">
+                #{url,jdbcType=VARCHAR},
+            </if>
+            <if test="platform != null">
+                #{platform,jdbcType=VARCHAR},
+            </if>
+            <if test="memo != null">
+                #{memo,jdbcType=VARCHAR},
+            </if>
+            <if test="mch != null">
+                #{mch,jdbcType=VARCHAR},
+            </if>
+            <if test="key != null">
+                #{key,jdbcType=VARCHAR},
+            </if>
+            <if test="thirdpay != null">
+                #{thirdpay,jdbcType=VARCHAR},
+            </if>
+            <if test="veurl != null">
+                #{veurl,jdbcType=VARCHAR},
+            </if>
+            <if test="thirdurl != null">
+                #{thirdurl,jdbcType=VARCHAR},
+            </if>
+            <if test="orderurl != null">
+                #{orderurl,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="cooc.demo.model.ZaVersion">
+        update za_version
+        <set>
+            <if test="version != null">
+                version = #{version,jdbcType=VARCHAR},
+            </if>
+            <if test="isshop != null">
+                isshop = #{isshop,jdbcType=INTEGER},
+            </if>
+            <if test="isvisiter != null">
+                isvisiter = #{isvisiter,jdbcType=INTEGER},
+            </if>
+            <if test="ismemu != null">
+                ismemu = #{ismemu,jdbcType=INTEGER},
+            </if>
+            <if test="url != null">
+                url = #{url,jdbcType=VARCHAR},
+            </if>
+            <if test="platform != null">
+                platform = #{platform,jdbcType=VARCHAR},
+            </if>
+            <if test="memo != null">
+                memo = #{memo,jdbcType=VARCHAR},
+            </if>
+            <if test="mch != null">
+                mch = #{mch,jdbcType=VARCHAR},
+            </if>
+            <if test="key != null">
+                key = #{key,jdbcType=VARCHAR},
+            </if>
+            <if test="thirdpay != null">
+                ThirdPay = #{thirdpay,jdbcType=VARCHAR},
+            </if>
+            <if test="veurl != null">
+                veUrl = #{veurl,jdbcType=VARCHAR},
+            </if>
+            <if test="thirdurl != null">
+                thirdUrl = #{thirdurl,jdbcType=VARCHAR},
+            </if>
+            <if test="orderurl != null">
+                orderUrl = #{orderurl,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="cooc.demo.model.ZaVersion">
+        update za_version
+        set version = #{version,jdbcType=VARCHAR},
+        isshop = #{isshop,jdbcType=INTEGER},
+        isvisiter = #{isvisiter,jdbcType=INTEGER},
+        ismemu = #{ismemu,jdbcType=INTEGER},
+        url = #{url,jdbcType=VARCHAR},
+        platform = #{platform,jdbcType=VARCHAR},
+        memo = #{memo,jdbcType=VARCHAR},
+        mch = #{mch,jdbcType=VARCHAR},
+        key = #{key,jdbcType=VARCHAR},
+        ThirdPay = #{thirdpay,jdbcType=VARCHAR},
+        veUrl = #{veurl,jdbcType=VARCHAR},
+        thirdUrl = #{thirdurl,jdbcType=VARCHAR},
+        orderUrl = #{orderurl,jdbcType=VARCHAR}
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <select id="selectZaVersionByPlatform" resultType="java.util.Map" parameterType="java.lang.String">
+        select
+        id, version, isshop, isvisiter, ismemu, url, platform, memo, mch, `key`, ThirdPay,
+        veUrl, thirdUrl, orderUrl
+        from za_version
+        where platform = #{platform,jdbcType=VARCHAR}
+    </select>
+</mapper>

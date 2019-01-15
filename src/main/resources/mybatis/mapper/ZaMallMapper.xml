@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cooc.demo.mapper.ZaMallMapper">
+    <resultMap id="BaseResultMap" type="cooc.demo.model.ZaMall">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="title" property="title" jdbcType="VARCHAR"/>
+        <result column="des" property="des" jdbcType="VARCHAR"/>
+        <result column="denomination" property="denomination" jdbcType="INTEGER"/>
+        <result column="payMoney" property="paymoney" jdbcType="DECIMAL"/>
+        <result column="logo" property="logo" jdbcType="VARCHAR"/>
+        <result column="type" property="type" jdbcType="INTEGER"/>
+        <result column="isUse" property="isuse" jdbcType="INTEGER"/>
+        <result column="cycle" property="cycle" jdbcType="INTEGER"/>
+        <result column="roomcard" property="roomcard" jdbcType="INTEGER"/>
+        <result column="coins" property="coins" jdbcType="INTEGER"/>
+        <result column="status" property="status" jdbcType="INTEGER"/>
+        <result column="platform" property="platform" jdbcType="VARCHAR"/>
+        <result column="createTime" property="createtime" jdbcType="TIMESTAMP"/>
+        <result column="memo" property="memo" jdbcType="VARCHAR"/>
+        <result column="viproomcard" property="viproomcard" jdbcType="INTEGER"/>
+        <result column="viprank" property="viprank" jdbcType="BIGINT"/>
+        <result column="vipcoins" property="vipcoins" jdbcType="INTEGER"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, title, des, denomination, payMoney, logo, type, isUse, cycle, roomcard, coins,
+        status, platform, createTime, memo, viproomcard, viprank, vipcoins
+    </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List"/>
+        from za_mall
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete from za_mall
+        where id = #{id,jdbcType=BIGINT}
+    </delete>
+    <insert id="insert" parameterType="cooc.demo.model.ZaMall">
+        insert into za_mall (id, title, des,
+        denomination, payMoney, logo,
+        type, isUse, cycle,
+        roomcard, coins, status,
+        platform, createTime, memo,
+        viproomcard, viprank, vipcoins
+        )
+        values (#{id,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR}, #{des,jdbcType=VARCHAR},
+        #{denomination,jdbcType=INTEGER}, #{paymoney,jdbcType=DECIMAL}, #{logo,jdbcType=VARCHAR},
+        #{type,jdbcType=INTEGER}, #{isuse,jdbcType=INTEGER}, #{cycle,jdbcType=INTEGER},
+        #{roomcard,jdbcType=INTEGER}, #{coins,jdbcType=INTEGER}, #{status,jdbcType=INTEGER},
+        #{platform,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP}, #{memo,jdbcType=VARCHAR},
+        #{viproomcard,jdbcType=INTEGER}, #{viprank,jdbcType=BIGINT}, #{vipcoins,jdbcType=INTEGER}
+        )
+    </insert>
+    <insert id="insertSelective" parameterType="cooc.demo.model.ZaMall">
+        insert into za_mall
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="title != null">
+                title,
+            </if>
+            <if test="des != null">
+                des,
+            </if>
+            <if test="denomination != null">
+                denomination,
+            </if>
+            <if test="paymoney != null">
+                payMoney,
+            </if>
+            <if test="logo != null">
+                logo,
+            </if>
+            <if test="type != null">
+                type,
+            </if>
+            <if test="isuse != null">
+                isUse,
+            </if>
+            <if test="cycle != null">
+                cycle,
+            </if>
+            <if test="roomcard != null">
+                roomcard,
+            </if>
+            <if test="coins != null">
+                coins,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="platform != null">
+                platform,
+            </if>
+            <if test="createtime != null">
+                createTime,
+            </if>
+            <if test="memo != null">
+                memo,
+            </if>
+            <if test="viproomcard != null">
+                viproomcard,
+            </if>
+            <if test="viprank != null">
+                viprank,
+            </if>
+            <if test="vipcoins != null">
+                vipcoins,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="title != null">
+                #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="des != null">
+                #{des,jdbcType=VARCHAR},
+            </if>
+            <if test="denomination != null">
+                #{denomination,jdbcType=INTEGER},
+            </if>
+            <if test="paymoney != null">
+                #{paymoney,jdbcType=DECIMAL},
+            </if>
+            <if test="logo != null">
+                #{logo,jdbcType=VARCHAR},
+            </if>
+            <if test="type != null">
+                #{type,jdbcType=INTEGER},
+            </if>
+            <if test="isuse != null">
+                #{isuse,jdbcType=INTEGER},
+            </if>
+            <if test="cycle != null">
+                #{cycle,jdbcType=INTEGER},
+            </if>
+            <if test="roomcard != null">
+                #{roomcard,jdbcType=INTEGER},
+            </if>
+            <if test="coins != null">
+                #{coins,jdbcType=INTEGER},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=INTEGER},
+            </if>
+            <if test="platform != null">
+                #{platform,jdbcType=VARCHAR},
+            </if>
+            <if test="createtime != null">
+                #{createtime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="memo != null">
+                #{memo,jdbcType=VARCHAR},
+            </if>
+            <if test="viproomcard != null">
+                #{viproomcard,jdbcType=INTEGER},
+            </if>
+            <if test="viprank != null">
+                #{viprank,jdbcType=BIGINT},
+            </if>
+            <if test="vipcoins != null">
+                #{vipcoins,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="cooc.demo.model.ZaMall">
+        update za_mall
+        <set>
+            <if test="title != null">
+                title = #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="des != null">
+                des = #{des,jdbcType=VARCHAR},
+            </if>
+            <if test="denomination != null">
+                denomination = #{denomination,jdbcType=INTEGER},
+            </if>
+            <if test="paymoney != null">
+                payMoney = #{paymoney,jdbcType=DECIMAL},
+            </if>
+            <if test="logo != null">
+                logo = #{logo,jdbcType=VARCHAR},
+            </if>
+            <if test="type != null">
+                type = #{type,jdbcType=INTEGER},
+            </if>
+            <if test="isuse != null">
+                isUse = #{isuse,jdbcType=INTEGER},
+            </if>
+            <if test="cycle != null">
+                cycle = #{cycle,jdbcType=INTEGER},
+            </if>
+            <if test="roomcard != null">
+                roomcard = #{roomcard,jdbcType=INTEGER},
+            </if>
+            <if test="coins != null">
+                coins = #{coins,jdbcType=INTEGER},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=INTEGER},
+            </if>
+            <if test="platform != null">
+                platform = #{platform,jdbcType=VARCHAR},
+            </if>
+            <if test="createtime != null">
+                createTime = #{createtime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="memo != null">
+                memo = #{memo,jdbcType=VARCHAR},
+            </if>
+            <if test="viproomcard != null">
+                viproomcard = #{viproomcard,jdbcType=INTEGER},
+            </if>
+            <if test="viprank != null">
+                viprank = #{viprank,jdbcType=BIGINT},
+            </if>
+            <if test="vipcoins != null">
+                vipcoins = #{vipcoins,jdbcType=INTEGER},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="cooc.demo.model.ZaMall">
+        update za_mall
+        set title = #{title,jdbcType=VARCHAR},
+        des = #{des,jdbcType=VARCHAR},
+        denomination = #{denomination,jdbcType=INTEGER},
+        payMoney = #{paymoney,jdbcType=DECIMAL},
+        logo = #{logo,jdbcType=VARCHAR},
+        type = #{type,jdbcType=INTEGER},
+        isUse = #{isuse,jdbcType=INTEGER},
+        cycle = #{cycle,jdbcType=INTEGER},
+        roomcard = #{roomcard,jdbcType=INTEGER},
+        coins = #{coins,jdbcType=INTEGER},
+        status = #{status,jdbcType=INTEGER},
+        platform = #{platform,jdbcType=VARCHAR},
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+        memo = #{memo,jdbcType=VARCHAR},
+        viproomcard = #{viproomcard,jdbcType=INTEGER},
+        viprank = #{viprank,jdbcType=BIGINT},
+        vipcoins = #{vipcoins,jdbcType=INTEGER}
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <select id="selectZaMallByMap" resultType="java.util.Map" parameterType="java.util.Map">
+        select
+        id, title, des, denomination, payMoney, logo, type, isUse, cycle, roomcard, coins,
+        status, platform, createTime, memo, viproomcard, viprank, vipcoins
+        from za_mall
+        <where>
+
+            <if test="isUse != null">
+                and isUse = #{isUse,jdbcType=VARCHAR}
+            </if>
+
+            <if test="platform != null">
+                and platform = #{platform,jdbcType=VARCHAR}
+            </if>
+        </where>
+        order by createTime desc
+    </select>
+</mapper>

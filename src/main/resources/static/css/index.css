@@ -1,0 +1,307 @@
+body {
+    padding-top: 0;
+    padding-bottom: 0.49rem;
+
+}
+
+/*轮播图*/
+.swiper-container img {
+    width: 100%;
+    height: 2rem;
+}
+
+.swiper-pagination-bullet {
+    height: 0.05rem !important;
+    width: 0.05rem !important;
+    background: #ffffff !important;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    width: 0.2rem !important;
+    background: #ffffff !important;
+    opacity: 1;
+    border-radius: 0.03rem !important;
+}
+
+/*轮播图 end*/
+
+.select {
+    width: 94%;
+    margin-left: 3%;
+    border-radius: 0.05rem;
+    margin-top: -0.1rem;
+    position: relative;
+    z-index: 999;
+    background-color: #ffffff;
+    padding-bottom: 0.012rem;
+    box-shadow: 0px 15px 30px 0px rgba(10, 57, 122, 0.25);
+}
+
+.select ul {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: 0.05rem;
+}
+
+.select ul li {
+    border-bottom: solid 1px #999;
+    background-color: #ffffff;
+}
+
+.select ul li .location {
+    float: left;
+    height: 0.4rem;
+    line-height: 0.4rem;
+}
+
+.select ul li img {
+    height: 0.2rem;
+}
+
+.select ul li .dingwei {
+    float: right;
+    border-left: solid 1px #999;
+    height: 0.36rem;
+    margin-top: 0.02rem;
+    line-height: 0.36rem;
+}
+
+.select ul li:last-child {
+    height: 0.4rem;
+    margin-top: 0.36rem;
+    line-height: 0.4rem;
+}
+
+.select .btn1 {
+    height: 0.4rem;
+    line-height: 0.4rem;
+    background: #1f6bd3;
+    color: #fff;
+    text-align: center;
+    margin: 0.1rem;
+    border-radius: 0.2rem;
+}
+
+/*选择入住时间插件*/
+.Date_lr {
+    width: 50%;
+    text-align: center;
+}
+
+.span21 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: #666;
+    border: 1px solid #e5e5e5;
+    padding: 2px 8px;
+    line-height: 20px;
+    border-radius: .2rem;
+    background-color: #fff;
+}
+
+#checkinout {
+    height: 0.35rem;
+    line-height: 0.35rem;
+    position: relative;
+    /*margin: 10px;*/
+    /*padding: 2px 0;*/
+    display: -webkit-box;
+    display: flex;
+    border: 1px solid #e5e5e5;
+    border-radius: .02rem;
+    background-color: #fff;
+}
+
+#firstSelect p {
+    line-height: 0.35rem;
+    color: #999;
+    font-size: 12px;
+}
+
+#startDate {
+    border: 0;
+    position: absolute;
+    left: 0;
+    margin: 0 auto;
+    width: 50%;
+    font-size: 16px;
+    color: #1b8cf4;
+    text-align: center;
+}
+
+#endDate {
+    border: 0;
+    position: absolute;
+    right: 0;
+    margin: auto 0;
+    width: 50%;
+    font-size: 16px;
+    color: #1b8cf4;
+    text-align: center;
+}
+
+.mask_calendar {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .4);
+    display: none;
+    z-index: 9999;
+}
+
+.calendar {
+    height: 400px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translate3d(0, -100%, 0);
+        visibility: visible;
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.slideInDown {
+    animation-name: slideInDown;
+}
+
+.houseType {
+    background-color: #ffffff;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-top: 0.1rem;
+    padding-bottom: 0.1rem;
+}
+
+.houseType .tpye {
+    font-size: 0.15rem;
+    height: 0.4rem;
+    line-height: 0.4rem;
+}
+
+.houseType ul {
+    height: 1rem;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.houseType ul::-webkit-scrollbar {
+    display: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.houseType ul li {
+    height: 1rem;
+    width: 31.3%;
+    padding-right: 1%;
+    float: left;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.houseType ul li span {
+    height: 0.2rem;
+
+}
+
+.houseType ul img {
+    height: 0.8rem;
+    width: 100%;
+}
+
+.promise {
+    width: 96%;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: #ffffff;
+    /*margin-top: 0.02rem;*/
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+}
+
+.promise ul li {
+    width: 25%;
+    float: left;
+}
+
+.promise ul li span {
+    display: block;
+    text-align: center;
+}
+
+.promise ul li img {
+    display: block;
+    width: 0.215rem;
+    margin: 0 auto;
+}
+
+.yh {
+    position: fixed;
+    right: 0.15rem;
+    bottom: 0.6rem;
+}
+
+.yh img {
+    width: 0.5rem;
+}
+
+.jx {
+    background-color: #ffffff;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-top: 0.1rem;
+    padding-bottom: 0.1rem;
+}
+
+.jx .tpye {
+    font-size: 0.15rem;
+    height: 0.4rem;
+    line-height: 0.4rem;
+}
+
+.jx ul li {
+    width: 49%;
+    padding-top: 0.1rem;
+    float: left;
+    text-align: center;
+}
+
+.jx ul li:nth-of-type(even) {
+    padding-top: 0.2rem;
+    padding-left: 1%;
+}
+
+.jx ul li:nth-of-type(odd) {
+    padding-right: 1%;
+}
+
+.jx ul li img {
+    width: 100%;
+    height: 1rem;
+}

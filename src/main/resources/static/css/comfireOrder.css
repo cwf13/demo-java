@@ -1,0 +1,214 @@
+.houseMessage {
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    background-color: #ffffff;
+
+}
+
+.houseMessage .fengmian {
+    float: left;
+    width: 30%
+}
+
+.houseMessage img {
+    width: 70%;
+    height: 0.6rem;
+    border-radius: 10%;
+}
+
+.houseMessage .houseType {
+    float: left;
+    width: 70%;
+}
+
+/*选择入住时间插件*/
+.Date_lr {
+    width: 50%;
+    text-align: center;
+}
+
+.span21 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: #666;
+    border: 1px solid #e5e5e5;
+    padding: 2px 8px;
+    line-height: 20px;
+    border-radius: .2rem;
+    background-color: #fff;
+}
+
+.time {
+    padding-top: 0.1rem;
+    background-color: #fff;
+}
+
+#checkinout {
+    height: 0.35rem;
+    line-height: 0.35rem;
+    position: relative;
+    /*margin: 10px;*/
+
+    display: -webkit-box;
+    display: flex;
+    border: 1px solid #e5e5e5;
+    border-radius: .02rem;
+    background-color: #fff;
+}
+
+#firstSelect p {
+    line-height: 0.35rem;
+    color: #999;
+    font-size: 12px;
+}
+
+#startDate {
+    border: 0;
+    position: absolute;
+    left: 0;
+    margin: 0 auto;
+    width: 50%;
+    font-size: 16px;
+    color: #1b8cf4;
+    text-align: center;
+    padding-bottom: 0.1rem
+}
+
+#endDate {
+    border: 0;
+    position: absolute;
+    right: 0;
+    margin: auto 0;
+    width: 50%;
+    font-size: 16px;
+    color: #1b8cf4;
+    text-align: center;
+    padding-bottom: 0.1rem
+}
+
+.mask_calendar {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .4);
+    display: none;
+    z-index: 9999;
+}
+
+.calendar {
+    height: 400px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translate3d(0, -100%, 0);
+        visibility: visible;
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.slideInDown {
+    animation-name: slideInDown;
+}
+
+/*选择日期结束*/
+
+.userMessage {
+    margin-top: 0.4rem;
+    background-color: #fff;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.userMessage li .liData {
+    border-bottom: #e5e5e5 solid 1px;
+    height: 0.49rem;
+    line-height: 0.49rem;
+}
+
+.userMessage li .liData .addOrsub {
+    width: 1rem;
+    display: inline-block;
+    float: right;
+
+}
+
+.userMessage li .liData .addOrsub .sub {
+    width: 0.3rem;
+}
+
+.userMessage li .liData .addOrsub .num {
+    width: 0.6rem;
+    text-align: center;
+}
+
+.userMessage li .liData .addOrsub .peopleNum {
+    width: 0.6rem;
+    text-align: center;
+}
+
+.userMessage li .liData .addOrsub .add {
+    width: 0.3rem;
+}
+
+.userMessage li .liData .in {
+    float: right;
+    height: 0.49rem;
+    text-align: right;
+}
+
+.bottomTab {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.bottomTab .fee {
+    height: 0.5rem;
+    width: 60%;
+    float: left;
+    color: #333;
+    background-color: #ffffff;
+    text-align: center;
+    line-height: 0.5rem;
+}
+
+.bottomTab .fee span {
+    font-size: 0.12rem;
+    color: red;
+}
+
+.bottomTab .fee .sum {
+    font-size: 0.16rem;
+}
+
+.bottomTab .comfire1 {
+    height: 0.5rem;
+    width: 40%;
+    float: left;
+    color: #ffffff;
+    background-color: #1b8cf4;
+    text-align: center;
+    line-height: 0.5rem;
+}

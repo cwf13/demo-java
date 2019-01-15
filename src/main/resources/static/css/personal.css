@@ -1,0 +1,89 @@
+body, html {
+    padding-top: 0;
+    background-color: #fff;
+    padding-bottom: 0.49rem;
+}
+
+.bg {
+    background-image: url("../img/common/bg.png");
+    height: 4rem;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+
+.bg .touxiang {
+    width: 0.851rem;
+    margin: 0 auto;
+    padding-top: 1rem;
+    position: relative;
+
+}
+
+.bg .touxiang .d-head {
+    display: block;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: #666e80;
+    margin: auto;
+}
+
+.bg .nick {
+    width: 0.851rem;
+    margin: 0 auto;
+    padding-top: 0.1rem;
+    text-align: center;
+    font-family: PingFang-SC-Medium;
+    font-size: 0.14rem;
+    color: #ffffff;
+}
+
+.bg .setting {
+    width: 0.2rem;
+    position: absolute;
+    top: 0.1rem;
+    right: 0.1rem;
+}
+
+.line {
+    height: 0.02rem;
+    background-color: #e6e6e6;
+}
+
+.main {
+    margin-left: 4%;
+    width: 92%;
+}
+
+.main ul li {
+    width: 33.3%;
+    height: 0.8rem;
+    float: left;
+    text-align: center;
+    position: relative;
+}
+
+.main ul li img {
+    height: 0.3rem;
+    display: block;
+    padding-top: 0.2rem;
+    margin: 0 auto;
+}
+
+.main ul li span {
+    margin-top: 0.65rem;
+}
+
+.fd {
+    margin-right: 9%;
+    margin-left: 9%;
+    background: #ffffff;
+    height: 0.35rem;
+    color: #1f6bd3;
+    text-align: center;
+    line-height: 0.35rem;
+    border: solid 1px #1f6bd3;
+    border-radius: 0.3rem;
+    margin-top: 0.15rem;
+}

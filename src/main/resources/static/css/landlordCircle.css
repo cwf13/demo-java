@@ -1,0 +1,235 @@
+body {
+    padding-top: 0;
+    padding-bottom: 0.49rem;
+}
+
+.bg {
+    background-image: url(../img/common/bg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 1.5rem;
+    width: 100%;
+}
+
+.bg img {
+    width: 0.2rem;
+    position: absolute;
+    right: 0.1rem;
+    top: 0.1rem;
+}
+
+ul {
+    /*padding-bottom: 0.1rem;*/
+}
+
+ul li {
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    padding-right: 3%;
+    padding-left: 3%;
+    background: #ffffff;
+    margin-bottom: 0.02rem;
+}
+
+ul li:last-child {
+    margin-bottom: 0;
+}
+
+ul li .left {
+    float: left;
+    width: 15%;
+
+}
+
+ul li .left img {
+    width: 0.4rem;
+    padding-right: 0.1rem;
+}
+
+ul li .right {
+    float: left;
+    width: 85%;
+}
+
+ul li .right .nick {
+    font-size: 0.14rem;
+    color: #76cdff;
+}
+
+ul li .right .text {
+    font-size: 0.12rem;
+    line-height: 0.18rem;
+}
+
+ul li .right .imgMesg {
+    width: 100%;
+    margin-top: 0.05rem;
+}
+
+ul li .right .imgMesg img {
+    float: left;
+    width: 31.333%;
+    padding-right: 2%;
+    padding-bottom: 0.08rem;
+}
+
+ul li .right .inp {
+    height: 0.25rem;
+    line-height: 0.25rem;
+    text-align: right;
+}
+
+ul li .right .inp img {
+    width: 0.2rem;
+    text-align: right;
+}
+
+/*输入消息框*/
+.showEmoji .inputBox {
+    /*position: fixed;*/
+    /*bottom: 0rem;*/
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.showEmoji .inputBox .inText {
+}
+
+.showEmoji .inputBox .inText textarea {
+    width: 100%;
+    height: 0.8rem;
+    max-height: 2rem;
+    border: 1px solid #cccccc;
+    text-align: left;
+    overflow: hidden;
+    overflow-y: scroll;
+    word-break: break-all;
+    padding: 0.05rem;
+    box-sizing: border-box;
+}
+
+.showEmoji .inputBox .upImg {
+    width: 100%;
+}
+
+.showEmoji .inputBox .btn {
+    width: 100%;
+    height: 0.4rem;
+    background-color: #1b8cf4;
+    border-radius: 0.1rem;
+    margin-top: 0.1rem;
+    line-height: 0.4rem;
+    color: #ffffff;
+}
+
+.showEmoji .inputBox .upImg .imgMes {
+    width: 30.7%;
+    margin-right: 1%;
+    margin-left: 1%;
+    height: 1rem;
+    float: left;
+    border: 1px solid #cccccc;
+}
+
+.showEmoji .inputBox .yuyin {
+    width: 10%;
+    float: left;
+    text-align: center;
+}
+
+.showEmoji .inputBox .yuyin .yy {
+    width: 0.25rem;
+    height: 0.25rem;
+    padding-top: 0.12rem;
+    padding-bottom: 0.12rem;
+}
+
+.showEmoji .inputBox .inContent {
+    width: 68%;
+    float: left;
+    border-radius: 0.05rem;
+    border: solid 0.005rem #8f99b2;
+    margin-top: 0.12rem;
+    margin-bottom: 0.12rem;
+    min-height: 0.25rem;
+    line-height: 0.25rem;
+    overflow: scroll;
+    max-height: 1rem;
+    overflow: hidden;
+    overflow: scroll;
+    word-break: break-all;
+    text-align: left;
+    padding-left: 0.05rem;
+    box-sizing: border-box;
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.showEmoji .inputBox .biaoqing {
+    float: left;
+    width: 10%;
+    text-align: center;
+}
+
+.showEmoji .inputBox .biaoqing .bq {
+    width: 0.25rem;
+    height: 0.25rem;
+    padding-top: 0.12rem;
+    padding-bottom: 0.12rem;
+}
+
+.showEmoji .inputBox .fasong {
+    float: left;
+    width: 10%;
+    text-align: center;
+}
+
+.showEmoji .inputBox .fasong .fs {
+    display: inline-block;
+    width: 0.25rem;
+    /*height: 0.25rem;*/
+    line-height: 0.25rem;
+    margin-top: 0.11rem;
+    padding-left: 0.05rem;
+    padding-right: 0.05rem;
+    font-size: 0.12rem;
+    border: solid 1px #1f6bd3;
+    border-radius: 0.05rem;
+}
+
+.qp {
+    margin-top: 0.1rem;
+    float: left;
+    width: 100%;
+}
+
+.qp .name {
+    width: 0.25rem;
+    float: left;
+    padding-right: 0.05rem;
+    color: #1b8cf4;
+
+    font-size: 0.14rem;
+}
+
+.msg {
+    display: inline-block;
+    max-width: 2.5rem;
+    background-color: #cccccc;
+    border-radius: 0.05rem;
+    color: #333333;
+    padding: 0.03rem;
+    float: left;
+    word-break: break-all;
+    font-size: 0.12rem;
+    margin-top: 0.04rem;
+    margin-left: 0.05rem;
+}
+
+.showEmoji .layui-m-layercont {
+    padding: 0.2rem 0.1rem;
+!important;
+}

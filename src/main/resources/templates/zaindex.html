@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+
+    <!-- css -->
+    <link rel="icon" href="../static/logo/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/plugins/swiper/swiper-3.4.1.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/base.css">
+    <!--  <link rel="stylesheet" type="text/css" href="../static/css/plugins/bootstrap.min.css">-->
+    <link rel="stylesheet" type="text/css" href="../static/css/plugins/layer/layer.css">
+    <link rel="stylesheet" href="../static/css/selectData.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/index.css">
+
+</head>
+<body ng-app="app">
+<input type="button" value="测试" class="btn btn-danger">
+<div>
+
+
+    <form id="form1" method="post" action="http://localhost:80/user/getTest">
+        <div>
+            <select class="form-control" name="isproxy" id="isproxy">
+
+            </select>
+        </div>
+        <input type="hidden" name="type" id="type" value="">
+        <input type="hidden" name="id" id="id" value="">
+        请选择支付通道：
+        <label><input name="alipay" type="radio" value="0"/>微信支付 </label>
+        <label><input name="alipay" type="radio" checked value="1"/>支付宝支付 </label></br>
+        <input type="button" class="pay" value="付款" onclick="getMoney()">
+    </form>
+</div>
+
+<div ng-controller="appc" ng-init="mywi=true">
+    <input type="checkbox" ng-model="mywi">
+    {{mywi}}
+
+    <table>
+        <tr>
+            <th>ip</th>
+            <th>id</th>
+            <th>coins</th>
+            <th>area</th>
+        </tr>
+        <tr ng-repeat="x in names">
+            <td>{{ x.ip }}</td>
+            <td>{{ x.id}}</td>a
+            <td>{{ x.coins }}</td>
+            <td>{{ x.area }}</td>
+            <td><input type="button" ng-click="delete(x)" value="删除"></td>
+        </tr>
+    </table>
+
+    <input type="button" ng-click="toggle()" value="显示/隐藏">
+
+    <div ng-hide="t">
+        <p>dskfahaj</p>
+        <p>ahskfhh</p>
+
+    </div>
+
+    <form>
+        选择一个选项:
+        <input type="radio" ng-model="myVar" value="dogs">Dogs
+        <input type="radio" ng-model="myVar" value="tuts">Tutorials
+        <input type="radio" ng-model="myVar" value="cars">Cars
+    </form>
+
+    <div ng-switch="myVar">
+        <div ng-switch-when="dogs">
+            <h1>Dogs</h1>
+            <p>Welcome to a world of dogs.</p>
+        </div>
+        <div ng-switch-when="tuts">
+            <h1>Tutorials</h1>
+            <p>Learn from examples.</p>
+        </div>
+        <div ng-switch-when="cars">
+            <h1>Cars</h1>
+            <p>Read about cars.</p>
+        </div>
+    </div>
+
+    <p>ng-switch 指令根据单选按钮的选择结果显示或隐藏 HTML 区域。</p>
+
+    <form>
+        选择一个选项:
+        <select ng-model="myVar1">
+            <option value="">
+            <option value="dogs">Dogs
+            <option value="tuts">Tutorials
+            <option value="cars">Cars
+        </select>
+    </form>
+
+<form name="myForm" novalidate>
+    <p>用户名:<br>
+        <input type="number" name="user" ng-model="user" required>
+        <span style="color:red" ng-show="myForm.user.$dirty && myForm.user.$invalid">
+        <span ng-show="myForm.user.$error.required">用户名是必须的。</span>
+        </span>
+    </p>
+</form>
+
+</div>
+
+
+<!-- js -->
+<script type="text/javascript" charset="utf-8" src="../static/js/angular/angular.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="../static/js/angular/zaindex.js"></script>
+<script type="text/javascript" charset="utf-8" src="../static/js/plugins/JQuery/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="../static/js/plugins/layer/layer_mobile.js"></script>
+<script type="text/javascript" charset="utf-8" src="../static/js/plugins/swiper/swiper-3.4.1.jquery.min.js"></script>
+<script type="text/javascript" src="../static/js/plugins/data/date.js"></script>
+<script type="text/javascript" charset="utf-8" src="../static/js/common.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=sGEk2GIylTBe132mEr10artN2pfdOFvS"></script>
+<!--<script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>-->
+<script type="text/javascript" charset="utf-8" src="../static/js/zaindex.js"></script>
+
+</body>
+</html>

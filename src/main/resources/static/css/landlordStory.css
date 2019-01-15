@@ -1,0 +1,120 @@
+body {
+    background-color: #ffffff;
+}
+
+/*文章*/
+.article {
+    padding-left: 3%;
+    padding-right: 3%;
+    background-color: #ffffff;
+    padding-top: 0.1rem;
+}
+
+.article .title {
+    padding-bottom: 0.2rem;
+}
+
+.article .title .tit {
+    font-size: 0.16rem;
+}
+
+.article .title .author {
+    font-size: 0.12rem;
+    color: #abaeb5;
+    margin-top: 0.1rem;
+}
+
+.article .title .author span {
+    color: #1b8cf4;
+}
+
+.article .content {
+    text-align: center;
+
+}
+
+.article .content img {
+    width: 80%;
+    margin-bottom: 0.1rem;
+
+}
+
+.article .content p {
+    font-size: 0.12rem;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: left;
+    padding-bottom: 0.1rem;
+    margin-top: 0.1rem;
+}
+
+/*文章结束*/
+
+/*点赞开始*/
+.dianzan {
+    padding-left: 15%;
+    padding-right: 15%;
+    background-color: #ffffff;
+    text-align: center;
+    padding-bottom: 0.1rem;
+}
+
+.like {
+    display: inline-block;
+    font-size: 0.2rem;
+    color: #ccc;
+    z-index: 999;
+    /*cursor:pointer;*/
+    width: 0.2rem;
+}
+
+.cs {
+    color: #f00;
+}
+
+.dianzan .tips {
+    display: block;
+    font-size: 0.12rem;
+}
+
+/*点赞结束*/
+
+.gotoHomestay {
+    padding-top: 0.05rem;
+    margin-left: 3%;
+    margin-right: 3%;
+    background-color: #ffffff;
+    margin-bottom: 0.2rem;
+    margin-top: 0.2rem;
+    box-shadow: 0px 0px 30px 5px rgba(10, 57, 122, 0.25);
+}
+
+.gotoHomestay .tp {
+    font-size: 0.14rem;
+    line-height: 0.16rem;
+    padding-left: 3%;
+    box-sizing: border-box;
+}
+
+.gotoHomestay .homestay {
+
+}
+
+.gotoHomestay .homestay .homestayImg {
+    float: left;
+    width: 30%;
+}
+
+.gotoHomestay .homestay .homestayImg img {
+    width: 80%;
+    padding: 10%;
+    padding-right: 0;
+}
+
+.gotoHomestay .homestay .homestayName {
+    float: left;
+    width: 70%;
+    font-size: 0.12rem;
+    padding-top: 0.1rem
+
+}

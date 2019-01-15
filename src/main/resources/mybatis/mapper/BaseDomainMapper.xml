@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cooc.demo.mapper.BaseDomainMapper">
+    <resultMap id="BaseResultMap" type="cooc.demo.model.BaseDomain">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="domain" property="domain" jdbcType="VARCHAR"/>
+        <result column="platform" property="platform" jdbcType="VARCHAR"/>
+        <result column="key" property="key" jdbcType="VARCHAR"/>
+        <result column="isUse" property="isuse" jdbcType="INTEGER"/>
+        <result column="expiryTime" property="expirytime" jdbcType="TIMESTAMP"/>
+        <result column="memo" property="memo" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, domain, platform, key, isUse, expiryTime, memo
+    </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List"/>
+        from base_domain
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete from base_domain
+        where id = #{id,jdbcType=BIGINT}
+    </delete>
+    <insert id="insert" parameterType="cooc.demo.model.BaseDomain">
+        insert into base_domain (id, domain, platform,
+        key, isUse, expiryTime,
+        memo)
+        values (#{id,jdbcType=BIGINT}, #{domain,jdbcType=VARCHAR}, #{platform,jdbcType=VARCHAR},
+        #{key,jdbcType=VARCHAR}, #{isuse,jdbcType=INTEGER}, #{expirytime,jdbcType=TIMESTAMP},
+        #{memo,jdbcType=VARCHAR})
+    </insert>
+    <insert id="insertSelective" parameterType="cooc.demo.model.BaseDomain">
+        insert into base_domain
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="domain != null">
+                domain,
+            </if>
+            <if test="platform != null">
+                platform,
+            </if>
+            <if test="key != null">
+                key,
+            </if>
+            <if test="isuse != null">
+                isUse,
+            </if>
+            <if test="expirytime != null">
+                expiryTime,
+            </if>
+            <if test="memo != null">
+                memo,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="domain != null">
+                #{domain,jdbcType=VARCHAR},
+            </if>
+            <if test="platform != null">
+                #{platform,jdbcType=VARCHAR},
+            </if>
+            <if test="key != null">
+                #{key,jdbcType=VARCHAR},
+            </if>
+            <if test="isuse != null">
+                #{isuse,jdbcType=INTEGER},
+            </if>
+            <if test="expirytime != null">
+                #{expirytime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="memo != null">
+                #{memo,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="cooc.demo.model.BaseDomain">
+        update base_domain
+        <set>
+            <if test="domain != null">
+                domain = #{domain,jdbcType=VARCHAR},
+            </if>
+            <if test="platform != null">
+                platform = #{platform,jdbcType=VARCHAR},
+            </if>
+            <if test="key != null">
+                key = #{key,jdbcType=VARCHAR},
+            </if>
+            <if test="isuse != null">
+                isUse = #{isuse,jdbcType=INTEGER},
+            </if>
+            <if test="expirytime != null">
+                expiryTime = #{expirytime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="memo != null">
+                memo = #{memo,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="cooc.demo.model.BaseDomain">
+        update base_domain
+        set domain = #{domain,jdbcType=VARCHAR},
+        platform = #{platform,jdbcType=VARCHAR},
+        key = #{key,jdbcType=VARCHAR},
+        isUse = #{isuse,jdbcType=INTEGER},
+        expiryTime = #{expirytime,jdbcType=TIMESTAMP},
+        memo = #{memo,jdbcType=VARCHAR}
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <select id="selectBaseDomainByDomain" resultType="java.util.Map" parameterType="java.lang.String">
+        select
+        id, domain, platform, 'key', isUse, expiryTime, memo
+        from base_domain
+        where domain = #{domain,jdbcType=VARCHAR}
+    </select>
+</mapper>
